@@ -1,0 +1,94 @@
+@use '../../../../styles/variables' as *;
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    background: rgba(255, 255, 255, .75);
+    backdrop-filter: blur(14px);
+    border-bottom: 1px solid rgba(0, 0, 0, .05);
+    transition: .3s;
+}
+
+.container {
+    width: min(1200px, 92%);
+    margin: auto;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 30px;
+    font-weight: 700;
+    color: $primary;
+    font-family: 'Playfair Display', serif;
+    cursor: pointer;
+
+    span {
+        color: $secondary;
+    }
+}
+
+.nav-links {
+    display: flex;
+    gap: 34px;
+
+    a {
+        text-decoration: none;
+        color: $text-dark;
+        font-weight: 500;
+        transition: .3s;
+
+        &:hover {
+            color: $secondary;
+        }
+    }
+}
+
+.actions {
+    display: flex;
+    gap: 15px;
+}
+
+.btn-outline {
+    height: 44px;
+    padding: 0 24px;
+    border-radius: 30px;
+    border: 1px solid $secondary;
+    background: white;
+    color: $secondary;
+    cursor: pointer;
+    transition: .3s;
+
+    &:hover {
+        background: $secondary;
+        color: white;
+    }
+}
+
+.btn-primary {
+    height: 44px;
+    padding: 0 26px;
+    border: none;
+    border-radius: 30px;
+    background: $secondary;
+    color: white;
+    cursor: pointer;
+    transition: .3s;
+    font-weight: 600;
+
+    &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 25px rgba(200, 169, 106, .35);
+    }
+}
+
+@media(max-width:992px) {
+    .nav-links {
+        display: none;
+    }
+}

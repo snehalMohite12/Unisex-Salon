@@ -1,0 +1,93 @@
+@use '../../../../../styles/variables' as *;
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding-top: 80px;
+}
+
+.hero-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 70px;
+    align-items: center;
+}
+
+.hero-left h1 {
+    font-size: 64px;
+    line-height: 1.1;
+    color: $primary;
+    margin: 20px 0;
+}
+
+.hero-left p {
+    font-size: 18px;
+    color: $text-light;
+    margin-bottom: 35px;
+}
+
+.badge {
+    display: inline-block;
+    padding: 8px 18px;
+    border-radius: 999px;
+    background: rgba(200,169,106,.12);
+    color: $secondary;
+    font-weight: 600;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 16px;
+    margin-top: 30px;
+}
+
+.btn-primary {
+    padding: 14px 32px;
+    border: none;
+    border-radius: 40px;
+    background: $secondary;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(200,169,106,.35);
+}
+
+.btn-outline {
+    padding: 14px 32px;
+    border-radius: 40px;
+    background: transparent;
+    border: 2px solid $secondary;
+    color: $secondary;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.btn-outline:hover {
+    background: $secondary;
+    color: white;
+}
+
+.hero-right img {
+    width: 100%;
+    animation: float 5s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}

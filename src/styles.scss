@@ -1,1 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
+@use './styles/_variables';
+@use './styles/_typography';
+@use './styles/_utilities';
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{ 
+scroll-behavior:smooth;
+}
+
+body{
+overflow-x:hidden;
+}
