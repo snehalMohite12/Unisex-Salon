@@ -1,0 +1,91 @@
+@use '../../../../../styles/variables' as *;
+
+.why-us{
+
+    background:#fafafa;
+}
+
+.why-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:30px;
+}
+
+.why-card{
+
+    background:white;
+
+    border-radius:20px;
+
+    padding:35px;
+
+    text-align:center;
+
+    transition:.35s;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.06);
+}
+
+.why-card:hover{
+
+    transform:translateY(-10px);
+}
+
+.icon{
+
+    width:80px;
+
+    height:80px;
+
+    margin:auto;
+
+    border-radius:50%;
+
+    background:#f8f0de;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:34px;
+
+    margin-bottom:25px;
+}
+
+.why-card h3{
+
+    margin-bottom:15px;
+
+    color:$primary;
+}
+
+.why-card p{
+
+    color:$text-light;
+
+    line-height:1.7;
+}
+.icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: #f8f0de;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 0 auto 25px;
+
+    mat-icon {
+        color: $secondary;
+        font-size: 36px;
+        width: 36px;
+        height: 36px;
+    }
+}

@@ -1,0 +1,25 @@
+<div class="service-card">
+
+    <img
+        [src]="service().image"
+        [alt]="service().title">
+
+    <div class="content">
+
+        <h3>{{ service().title }}</h3>
+
+        <p>{{ service().description }}</p>
+
+        <div class="info">
+
+            <span>{{ service().duration }}</span>
+
+            <strong>₹{{ service().price }}</strong>
+
+        </div>
+
+        <app-button text="Book Appointment"></app-button>
+
+    </div>
+
+</div>

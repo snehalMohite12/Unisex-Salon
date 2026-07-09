@@ -1,0 +1,47 @@
+@use '../../../../../styles/variables' as *;
+
+.pricing {
+    padding: 100px 0;
+    background: #f8f9fa;
+}
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.pricing-card {
+    background: white;
+    border-radius: 24px;
+    padding: 40px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,.08);
+    transition: .3s;
+}
+
+.pricing-card:hover {
+    transform: translateY(-10px);
+    border: 2px solid $secondary;
+}
+
+.pricing-card h2 {
+    color: $secondary;
+    font-size: 42px;
+    margin: 20px 0;
+}
+
+.pricing-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 30px 0;
+}
+
+.pricing-card li {
+    margin: 12px 0;
+    color: $text-light;
+}
+
+.btn-primary {
+    width: 100%;
+}

@@ -1,0 +1,45 @@
+@use '../../../../styles/variables' as *;
+
+.section-header {
+
+    max-width: 700px;
+
+    margin: 0 auto 70px;
+
+    text-align: center;
+}
+
+.subtitle {
+
+    display: inline-block;
+
+    color: $secondary;
+
+    font-weight: 600;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+    margin-bottom: 12px;
+}
+
+h2 {
+
+    font-size: 48px;
+
+    color: $primary;
+
+    margin-bottom: 18px;
+
+    line-height: 1.2;
+}
+
+p {
+
+    color: $text-light;
+
+    font-size: 18px;
+
+    line-height: 1.8;
+}

@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { BookAppointmentComponent } from '../../../features/appointment/dialogs/book-appointment/book-appointment.component';
 
 @Component({
   selector: 'app-navbar',
@@ -8,5 +10,15 @@ import { Component } from '@angular/core';
   styleUrl: './navbar.component.scss'
 })
 export class NavbarComponent {
+  private dialog = inject(MatDialog);
 
+  openBooking() {
+    this.dialog.open(BookAppointmentComponent, {
+      width: '1000px',
+      maxWidth: '95vw',
+      maxHeight: '90vh',
+      autoFocus: false,
+      panelClass: 'booking-dialog'
+    });
+  }
 }

@@ -1,0 +1,88 @@
+<!-- <section class="services section" id="services">
+
+    <div class="container">
+
+        <div class="section-header">
+
+            <span>OUR SERVICES</span>
+
+            <h2>Premium Beauty Services</h2>
+
+            <p>
+                Discover our professional beauty treatments
+                crafted to enhance your natural elegance.
+            </p>
+
+        </div>
+
+        <div class="service-grid">
+
+            @for(service of services; track service.id){
+
+                <div class="service-card">
+
+                    <img
+                        [src]="service.image"
+                        [alt]="service.title">
+
+                    <div class="content">
+
+                        <h3>{{service.title}}</h3>
+
+                        <p>{{service.description}}</p>
+
+                        <div class="info">
+
+                            <span>{{service.duration}}</span>
+
+                            <strong>₹{{service.price}}</strong>
+
+                        </div>
+
+                        <button>
+
+                            Book Now
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            }
+
+        </div>
+
+    </div>
+
+</section> -->
+
+<section class="services">
+
+    <div class="container">
+
+        <app-section-title
+
+            subtitle="OUR SERVICES"
+
+            title="Premium Beauty Services"
+
+            description="Discover our luxury salon treatments.">
+
+        </app-section-title>
+
+        <div class="service-grid">
+
+            @for(service of services; track service.id){
+
+                <app-service-card
+                    [service]="service">
+                </app-service-card>
+
+            }
+
+        </div>
+
+    </div>
+
+</section>

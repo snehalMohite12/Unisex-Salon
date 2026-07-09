@@ -1,0 +1,48 @@
+@use '../../../../styles//variables' as *;
+
+button {
+
+    padding: 14px 28px;
+
+    border-radius: 50px;
+
+    cursor: pointer;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    transition: .3s;
+}
+
+.primary {
+
+    background: $secondary;
+
+    border: none;
+
+    color: white;
+}
+
+.primary:hover {
+
+    transform: translateY(-3px);
+
+    box-shadow: 0 10px 25px rgba(200,169,106,.35);
+}
+
+.outline {
+
+    background: transparent;
+
+    border: 2px solid $secondary;
+
+    color: $secondary;
+}
+
+.outline:hover {
+
+    background: $secondary;
+
+    color: white;
+}

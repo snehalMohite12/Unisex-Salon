@@ -1,0 +1,112 @@
+<div class="booking-card">
+
+    <h2>Book Appointment</h2>
+
+    <p>
+        Fill in your details and we'll contact you shortly.
+    </p>
+
+    <form
+        [formGroup]="appointmentForm"
+        (ngSubmit)="submit()">
+
+        <mat-form-field appearance="outline">
+
+            <mat-label>Full Name</mat-label>
+
+            <input
+                matInput
+                formControlName="name">
+
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+
+            <mat-label>Mobile Number</mat-label>
+
+            <input
+                matInput
+                maxlength="10"
+                formControlName="mobile">
+
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+
+            <mat-label>Preferred Service</mat-label>
+
+            <mat-select formControlName="service">
+
+                <mat-option value="">
+                    Select Service
+                </mat-option>
+
+                <mat-option value="Hair Cut">
+                    Hair Cut
+                </mat-option>
+
+                <mat-option value="Hair Spa">
+                    Hair Spa
+                </mat-option>
+
+                <mat-option value="Facial">
+                    Facial
+                </mat-option>
+
+            </mat-select>
+
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+
+            <mat-label>Appointment Date</mat-label>
+
+            <input
+                matInput
+                [matDatepicker]="picker"
+                formControlName="appointmentDate">
+
+            <mat-datepicker-toggle
+                matIconSuffix
+                [for]="picker">
+            </mat-datepicker-toggle>
+
+            <mat-datepicker #picker></mat-datepicker>
+
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+
+            <mat-label>Preferred Time</mat-label>
+
+            <input
+                matInput
+                type="time"
+                formControlName="appointmentTime">
+
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+
+            <mat-label>Additional Note</mat-label>
+
+            <textarea
+                matInput
+                rows="4"
+                formControlName="note">
+            </textarea>
+
+        </mat-form-field>
+
+        <button
+            mat-flat-button
+            color="primary"
+            type="submit">
+
+            Book Appointment
+
+        </button>
+
+    </form>
+
+</div>

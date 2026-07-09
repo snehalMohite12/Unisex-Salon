@@ -1,0 +1,39 @@
+<section class="pricing">
+
+    <div class="container">
+
+        <app-section-title
+            subtitle="Pricing"
+            title="Affordable Luxury"
+            description="Transparent pricing with no hidden charges.">
+        </app-section-title>
+
+        <div class="pricing-grid">
+
+            @for(plan of plans; track plan.title){
+
+                <div class="pricing-card">
+
+                    <h3>{{plan.title}}</h3>
+
+                    <h2>₹{{plan.price}}</h2>
+
+                    <ul>
+
+                        @for(item of plan.features; track item){
+
+                            <li>✔ {{item}}</li>
+
+                        }
+
+                    </ul>
+
+                </div>
+
+            }
+
+        </div>
+
+    </div>
+
+</section>
