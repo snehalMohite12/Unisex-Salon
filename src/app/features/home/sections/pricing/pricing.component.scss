@@ -1,47 +1,90 @@
 @use '../../../../../styles/variables' as *;
 
 .pricing {
+
+    background: #fafafa;
+
     padding: 100px 0;
-    background: #f8f9fa;
 }
 
-.pricing-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
+.accordion-item {
+
+    border: none;
+
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    margin-bottom: 20px;
+
+    box-shadow: 0 8px 25px rgba(0,0,0,.08);
 }
 
-.pricing-card {
+.accordion-button {
+
+    font-size: 20px;
+
+    font-weight: 600;
+
+    padding: 20px;
+
+    color: $primary;
+
     background: white;
-    border-radius: 24px;
-    padding: 40px;
-    text-align: center;
-    box-shadow: 0 10px 30px rgba(0,0,0,.08);
-    transition: .3s;
 }
 
-.pricing-card:hover {
-    transform: translateY(-10px);
-    border: 2px solid $secondary;
-}
+.accordion-button:not(.collapsed){
 
-.pricing-card h2 {
+    background: #f8f0de;
+
     color: $secondary;
-    font-size: 42px;
-    margin: 20px 0;
 }
 
-.pricing-card ul {
-    list-style: none;
-    padding: 0;
-    margin: 30px 0;
+.accordion-button:focus{
+
+    box-shadow: none;
 }
 
-.pricing-card li {
-    margin: 12px 0;
-    color: $text-light;
+.accordion-body{
+
+    background: white;
 }
 
-.btn-primary {
-    width: 100%;
+.price-row{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    padding:15px 0;
+
+    border-bottom:1px solid #ececec;
+}
+
+.price-row:last-child{
+
+    border:none;
+}
+
+.price-row strong{
+
+    color:$secondary;
+}
+
+.accordion {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.price-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.price-row:last-child {
+    border-bottom: none;
 }

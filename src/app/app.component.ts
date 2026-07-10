@@ -6,13 +6,15 @@ import { ServicesComponent } from './features/home/sections/services/services.co
 import { TrustedByComponent } from './features/home/sections/trusted-by/trusted-by.component';
 import { WhyUsComponent } from './features/home/sections/why-us/why-us.component';
 import { PricingComponent } from './features/home/sections/pricing/pricing.component';
+import { FooterComponent } from './features/home/sections/footer/footer.component';
 
 @Component({
   selector: 'app-root',
   imports: [RouterOutlet, NavbarComponent, HeroComponent, ServicesComponent,
     TrustedByComponent,
     WhyUsComponent,
-    PricingComponent
+    PricingComponent,
+    FooterComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
