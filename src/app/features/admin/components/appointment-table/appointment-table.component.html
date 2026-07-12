@@ -1,0 +1,214 @@
+<div class="toolbar">
+
+    <div class="search-box">
+
+        <mat-form-field appearance="outline" class="search-field">
+
+            <mat-icon matPrefix>
+
+                search
+
+            </mat-icon>
+
+            <input matInput placeholder="Search customer by name or mobile">
+
+        </mat-form-field>
+        <button mat-flat-button class="employee-btn">
+
+            <mat-icon>
+
+                groups
+
+            </mat-icon>
+
+            Update Employees
+
+        </button>
+
+    </div>
+
+</div>
+
+<div class="filter-container">
+
+    <mat-chip-listbox>
+
+        @for(filter of filters; track filter){
+
+        <mat-chip-option [selected]="selectedFilter === filter" (click)="selectFilter(filter)">
+
+            {{ filter }}
+
+        </mat-chip-option>
+
+        }
+
+    </mat-chip-listbox>
+
+</div>
+<div class="table-wrapper">
+
+    <table mat-table [dataSource]="appointments">
+
+        <!-- Customer -->
+
+        <ng-container matColumnDef="customer">
+
+            <th mat-header-cell *matHeaderCellDef>
+
+                Customer
+
+            </th>
+
+            <td mat-cell *matCellDef="let row">
+
+                {{row.customer}}
+
+            </td>
+
+        </ng-container>
+
+        <!-- Mobile -->
+
+        <ng-container matColumnDef="mobile">
+
+            <th mat-header-cell *matHeaderCellDef>
+
+                Mobile
+
+            </th>
+
+            <td mat-cell *matCellDef="let row">
+
+                {{row.mobile}}
+
+            </td>
+
+        </ng-container>
+
+        <!-- Service -->
+
+        <ng-container matColumnDef="service">
+
+            <th mat-header-cell *matHeaderCellDef>
+
+                Service
+
+            </th>
+
+            <td mat-cell *matCellDef="let row">
+
+                {{row.service}}
+
+            </td>
+
+        </ng-container>
+        <ng-container matColumnDef="date">
+
+            <th mat-header-cell *matHeaderCellDef>
+
+                Date
+
+            </th>
+
+            <td mat-cell *matCellDef="let row">
+
+                {{row.date}}
+
+            </td>
+
+        </ng-container>
+        <ng-container matColumnDef="time">
+
+            <th mat-header-cell *matHeaderCellDef>
+
+                Time
+
+            </th>
+
+            <td mat-cell *matCellDef="let row">
+
+                {{row.time}}
+
+            </td>
+
+        </ng-container>
+        <ng-container matColumnDef="status">
+
+            <th mat-header-cell *matHeaderCellDef>
+
+                Status
+
+            </th>
+
+            <td mat-cell *matCellDef="let row">
+
+                <span class="status" [class.pending]="row.status==='Pending'"
+                    [class.confirmed]="row.status==='Confirmed'" [class.completed]="row.status==='Completed'">
+
+                    {{row.status}}
+
+                </span>
+
+            </td>
+
+        </ng-container>
+        <ng-container matColumnDef="employee">
+
+            <th mat-header-cell *matHeaderCellDef>
+
+                Employee
+
+            </th>
+
+            <td mat-cell *matCellDef="let row">
+
+                <mat-form-field appearance="outline" class="employee-select">
+
+                    <mat-select [(value)]="row.employee">
+
+                        @for(emp of employees;track emp){
+
+                        <mat-option [value]="emp">
+
+                            {{emp}}
+
+                        </mat-option>
+
+                        }
+
+                    </mat-select>
+
+                </mat-form-field>
+
+            </td>
+
+        </ng-container>
+        <ng-container matColumnDef="action">
+
+            <th mat-header-cell *matHeaderCellDef>
+
+                Action
+
+            </th>
+
+            <td mat-cell *matCellDef="let row">
+
+                <button mat-flat-button class="save-btn">
+
+                   Save
+
+                </button>
+
+            </td>
+
+        </ng-container>
+        <tr mat-header-row *matHeaderRowDef="displayedColumns">
+        </tr>
+
+        <tr mat-row *matRowDef="let row; columns: displayedColumns">
+        </tr>
+
+    </table>
+
+</div>
