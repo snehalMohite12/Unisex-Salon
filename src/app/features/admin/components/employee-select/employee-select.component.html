@@ -1,1 +1,125 @@
-<p>employee-select works!</p>
+<h2 mat-dialog-title>
+
+    Manage Employees
+
+</h2>
+
+<mat-dialog-content>
+
+    <div class="add-section">
+
+        <mat-form-field appearance="outline">
+
+            <mat-label>
+
+                Employee Name
+
+            </mat-label>
+
+            <input
+                matInput
+                [(ngModel)]="employeeName">
+
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+
+            <mat-label>
+
+                Mobile Number
+
+            </mat-label>
+
+            <input
+                matInput
+                [(ngModel)]="mobile">
+
+        </mat-form-field>
+
+        <button
+
+            mat-flat-button
+
+            class="add-btn"
+
+            (click)="addEmployee()">
+
+            <mat-icon>
+
+                add
+
+            </mat-icon>
+
+            Add Employee
+
+        </button>
+
+    </div>
+
+    <div class="employee-list">
+
+        @for(employee of employees;track employee; let i = $index){
+
+            <div class="employee-card">
+
+                <div class="left">
+
+                    <div class="avatar">
+
+                        {{employee.name.charAt(0)}}
+
+                    </div>
+
+                    <div>
+
+                        <h4>
+
+                            {{employee.name}}
+
+                        </h4>
+
+                        <span>
+
+                            {{employee.mobile}}
+
+                        </span>
+
+                    </div>
+
+                </div>
+
+                <button
+
+                    mat-icon-button
+
+                    color="warn"
+
+                    (click)="deleteEmployee(i)">
+
+                    <mat-icon>
+
+                        delete
+
+                    </mat-icon>
+
+                </button>
+
+            </div>
+
+        }
+
+    </div>
+
+</mat-dialog-content>
+
+<mat-dialog-actions align="end">
+
+    <button
+        mat-button
+        mat-dialog-close>
+
+        Close
+
+    </button>
+
+</mat-dialog-actions>
