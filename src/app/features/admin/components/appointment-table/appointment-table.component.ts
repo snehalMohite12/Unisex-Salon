@@ -11,6 +11,7 @@ import { MatChipsModule } from '@angular/material/chips';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatDialog } from '@angular/material/dialog';
 import { EmployeeSelectComponent } from '../employee-select/employee-select.component';
+import { Appointment } from '../../../../shared/models/appointment.model';
 
 
 @Component({
@@ -51,38 +52,29 @@ export class AppointmentTableComponent {
     'Amit',
     'Riya'
   ];
-  appointments = [
+  appointments: Appointment[] = [
 
     {
-      customer: 'Rahul Sharma',
-      mobile: '9876543210',
-      service: 'Hair Cut',
-      date: 'Today',
-      time: '11:00 AM',
-      status: 'Pending',
-      employee: ''
+      id:1,
+      customer:'Rahul',
+      mobile:'9876543210',
+      service:'Hair Cut',
+      date:'Today',
+      time:'11:00 AM',
+      status:'Pending',
+      employee:''
     },
 
     {
-      customer: 'Amit Patil',
-      mobile: '9876543211',
-      service: 'Facial',
-      date: 'Today',
-      time: '12:30 PM',
-      status: 'Confirmed',
-      employee: 'Priya'
-    },
-
-    {
-      customer: 'Sneha Joshi',
-      mobile: '9876543212',
-      service: 'Hair Spa',
-      date: 'Today',
-      time: '02:00 PM',
-      status: 'Completed',
-      employee: 'Neha'
+      id:2,
+      customer:'Sneha',
+      mobile:'9876543211',
+      service:'Hair Spa',
+      date:'Today',
+      time:'2:00 PM',
+      status:'Completed',
+      employee:'Priya'
     }
-
   ];
 
   filters = [

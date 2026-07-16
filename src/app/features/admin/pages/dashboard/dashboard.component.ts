@@ -9,7 +9,7 @@ import { AppointmentTableComponent } from '../../components/appointment-table/ap
   templateUrl: './dashboard.component.html',
   styleUrl: './dashboard.component.scss'
 })
-export class DashboardComponent {
+export class OwnerDashboardComponent {
 stats = [
 
   {

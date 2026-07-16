@@ -1,0 +1,191 @@
+.appointment-container{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:20px;
+
+}
+
+.toolbar{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+}
+
+.search-field{
+
+    width:420px;
+
+    max-width:100%;
+
+}
+
+.filter-container{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+}
+
+.table-wrapper{
+
+    background:#fff;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.05);
+
+}
+
+table{
+
+    width:100%;
+
+}
+
+th{
+
+    background:#FCFAF6 !important;
+
+    color:#444;
+
+    font-weight:600;
+
+}
+
+td{
+
+    padding-top:18px !important;
+
+    padding-bottom:18px !important;
+
+}
+
+.mat-mdc-row{
+
+    transition:.2s;
+
+}
+
+.mat-mdc-row:hover{
+
+    background:#FAFAFA;
+
+}
+
+/* Status */
+
+.status{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    min-width:120px;
+
+    padding:8px 16px;
+
+    border-radius:25px;
+
+    font-size:13px;
+
+    font-weight:600;
+
+}
+
+.pending{
+
+    background:#FFF4E5;
+
+    color:#D97706;
+
+}
+
+.progress{
+
+    background:#EAF3FF;
+
+    color:#2563EB;
+
+}
+
+.completed{
+
+    background:#EAFCEB;
+
+    color:#16A34A;
+
+}
+
+.rejected{
+
+    background:#FDECEC;
+
+    color:#DC2626;
+
+}
+
+/* Buttons */
+
+.start-btn{
+
+    background:#2563EB !important;
+
+    color:white !important;
+
+    border-radius:12px;
+
+    min-width:110px;
+
+}
+
+.complete-btn{
+
+    background:#16A34A !important;
+
+    color:white !important;
+
+    border-radius:12px;
+
+    min-width:110px;
+
+}
+
+button[disabled]{
+
+    border-radius:12px;
+
+}
+
+@media(max-width:768px){
+
+.table-wrapper{
+
+overflow-x:auto;
+
+}
+
+table{
+
+min-width:850px;
+
+}
+
+.search-field{
+
+width:100%;
+
+}
+
+}

@@ -3,9 +3,10 @@ import { BookAppointmentComponent } from './features/appointment/dialogs/book-ap
 import { WebsiteLayoutComponent } from './layouts/website-layout/website-layout.component';
 
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
-import { DashboardComponent } from './features/admin/pages/dashboard/dashboard.component';
+import { OwnerDashboardComponent } from './features/admin/pages/dashboard/dashboard.component';
 import { HomeComponent } from './features/home/pages/home/home.component';
 import { LoginComponent } from './features/auth/pages/login/login.component';
+import { EmployeeDashboardComponent } from './features/employee/pages/dashboard/dashboard.component';
 
 export const routes: Routes = [
     {
@@ -41,12 +42,33 @@ export const routes: Routes = [
 
             {
                 path: 'dashboard',
-                component: DashboardComponent,
+                component: OwnerDashboardComponent,
                 data: {
                     title: 'Dashboard'
                 }
             },
-                   ]
+        ]
+    },
+    {
+        path: 'employee',
+        component: AdminLayoutComponent,
+        children: [
+
+            {
+                path: '',
+                redirectTo: 'dashboard',
+                pathMatch: 'full'
+            },
+
+            {
+                path: 'dashboard',
+                component: EmployeeDashboardComponent,
+                data: {
+                    title: 'My Appointments'
+                }
+            }
+
+        ]
     },
     {
         path: '**',
