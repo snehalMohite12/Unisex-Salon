@@ -17,7 +17,7 @@ export class ServicesComponent {
       description:'Professional haircut by expert stylists.',
       duration:'30 Min',
       price:350,
-      image:'assets/images/services/haircut.jpg'
+      image:'assets/images/Haircut.png'
     },
 
     {
@@ -26,7 +26,7 @@ export class ServicesComponent {
       description:'Relaxing hair spa treatment.',
       duration:'60 Min',
       price:1200,
-      image:'assets/images/services/spa.jpg'
+      image:'assets/images/Hair Spa Treatment.png'
     },
 
     {
@@ -35,7 +35,7 @@ export class ServicesComponent {
       description:'Luxury skin rejuvenation.',
       duration:'45 Min',
       price:799,
-      image:'assets/images/services/facial.jpg'
+      image:'assets/images/Facial.png'
     },
 
     {
@@ -44,7 +44,7 @@ export class ServicesComponent {
       description:'Premium beard grooming.',
       duration:'20 Min',
       price:250,
-      image:'assets/images/services/beard.jpg'
+      image:'assets/images/Beard.png'
     },
 
     {
@@ -53,7 +53,7 @@ export class ServicesComponent {
       description:'Premium hair coloring service.',
       duration:'90 Min',
       price:1800,
-      image:'assets/images/services/color.jpg'
+      image:'assets/images/Hair Colouring.png'
     },
 
     {
@@ -62,7 +62,7 @@ export class ServicesComponent {
       description:'Complete bridal makeover.',
       duration:'3 Hours',
       price:6500,
-      image:'assets/images/services/makeup.jpg'
+      image:'assets/images/Bridal Glow.png'
     }
   ];
 }
